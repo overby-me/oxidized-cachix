@@ -755,7 +755,7 @@ async fn cmd_doctor(
     }
 
     // Check nix.conf
-    let user_conf = dirs::config_dir().map(|d| d.join("nix/nix.conf"));
+    let user_conf = dirs::config_dir().map(|d| d.join("platform/nix/nix.conf"));
     let root_conf = std::path::PathBuf::from("/etc/nix/nix.conf");
 
     for conf_path in [user_conf, Some(root_conf)].into_iter().flatten() {
